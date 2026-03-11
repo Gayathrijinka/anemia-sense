@@ -9,7 +9,7 @@ document.getElementById("anemiaForm").addEventListener("submit", function(e){
         mcv: parseFloat(document.getElementById("mcv").value)
     };
 
-    fetch('/predict', {
+    fetch('http://127.0.0.1:5000/predict', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
